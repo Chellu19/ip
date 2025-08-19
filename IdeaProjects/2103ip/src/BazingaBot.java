@@ -12,10 +12,9 @@ public class BazingaBot {
 
             if (input.equalsIgnoreCase("bye")) {
                 System.out.println("Live long and prosper, Bye Bye!");
-                break; // Exit the loop
+                break;
             }
 
-            // Echo the user's input
             System.out.println("You said: " + input);
         }
 
