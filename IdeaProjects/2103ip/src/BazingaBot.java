@@ -15,16 +15,43 @@ public class BazingaBot {
             String input = scanner.nextLine();
             String[] parts = input.split(" ", 2);
             String command = parts[0];
-            Task newTask = new Task(input);
 
-            if(!command.equalsIgnoreCase("list") && !command.equalsIgnoreCase("bye") && !command.equalsIgnoreCase("mark") && !command.equalsIgnoreCase("unmark")) {
-                tasks.add(newTask);
+
+            if(command.equalsIgnoreCase("deadline")) {
+                String [] deadlineParts = parts[1].split("/by", 2);
+                String description = deadlineParts[0].trim();
+                String by = deadlineParts[1].trim();
+                Deadline newDeadline = new Deadline(description, by);
+                tasks.add(newDeadline);
                 System.out.println("I have added to my eidetic memory: " + input);
+                System.out.println(" " + newDeadline);
+                System.out.println("There is now " + tasks.size() + " tasks to do. Go ahead procrastinate more.");
+            }
+
+            else if(command.equalsIgnoreCase("event")) {
+                String [] eventParts = parts[1].split("/from|/to", 3);
+                String description = eventParts[0].trim();
+                String from = eventParts[1].trim();
+                String to = eventParts[2].trim();
+                Event newEvent = new Event(description, from, to);
+                tasks.add(newEvent);
+                System.out.println("I have added to my eidetic memory: " + input);
+                System.out.println(" " + newEvent);
+                System.out.println("There is now " + tasks.size() + " tasks to do. Go ahead procrastinate more.");
+            }
+
+            else if(command.equalsIgnoreCase("todo")) {
+                String description = parts[1].trim();
+                Todo newTodo = new Todo(description);
+                tasks.add(newTodo);
+                System.out.println("I have added to my eidetic memory: " + input);
+                System.out.println(" " + newTodo);
+                System.out.println("There is now " + tasks.size() + " tasks to do. Go ahead procrastinate more.");
             }
 
             else if (command.equalsIgnoreCase("list")) {
                 for(int i = 0; i < tasks.size(); i++) {
-                    System.out.println((i + 1) + ". " + tasks.get(i).getStatusIcon() + " " + tasks.get(i).description);
+                    System.out.println((i + 1) + ". " + tasks.get(i).toString());
                 }
             }
 
