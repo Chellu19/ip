@@ -1,9 +1,17 @@
 public class Task {
-    public String description;
-    public boolean isDone;
+    public enum TaskType {
+        TODO,
+        DEADLINE,
+        EVENT
+    }
 
-    public Task(String description) {
+    protected String description;
+    protected boolean isDone;
+    protected TaskType taskType;
+
+    public Task(String description, TaskType taskType) {
         this.description = description;
+        this.taskType = taskType;
         this.isDone = false;
     }
 

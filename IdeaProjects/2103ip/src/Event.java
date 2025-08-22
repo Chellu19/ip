@@ -3,7 +3,7 @@ public class Event extends Task{
     protected String by;
 
     public Event(String description, String from, String by) {
-        super(description);
+        super(description, TaskType.EVENT);
         this.from = from;
         this.by = by;
     }
