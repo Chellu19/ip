@@ -79,6 +79,17 @@ public class BazingaBot {
                 }
             }
 
+            else if(command.equalsIgnoreCase("delete")) {
+                int taskId = Integer.parseInt(parts[1]) - 1;
+                if(taskId < 0 || taskId >= tasks.size()) {
+                    System.out.println("Invalid task id: " + parts[1]);
+                } else {
+                    String removedTask  = tasks.remove(taskId).toString();
+                    System.out.println("Ok I have wiped this from my memory: " + " " + removedTask);
+                }
+                System.out.println("There are " + tasks.size() + " quests you have left fellow gladiator.");
+            }
+
             else if (command.equalsIgnoreCase("bye")) {
                 System.out.println("Live long and prosper, Bye Bye!");
                 break;
@@ -86,7 +97,8 @@ public class BazingaBot {
 
             else if (!command.equalsIgnoreCase("deadline") && !command.equalsIgnoreCase("event")
                     && !command.equalsIgnoreCase("todo") && !command.equalsIgnoreCase("mark") &&
-                    !command.equalsIgnoreCase("unmark") && !command.equalsIgnoreCase("list")) {
+                    !command.equalsIgnoreCase("unmark") && !command.equalsIgnoreCase("list") &&
+                    !command.equalsIgnoreCase("bye") && !command.equalsIgnoreCase("delete")) {
                 throw new TaskException("I only speak English, Klingon or Yiddish!, Tell me what task clearly!");
             }
         }
