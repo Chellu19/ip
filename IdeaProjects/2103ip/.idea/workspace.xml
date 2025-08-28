@@ -5,8 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="33f95fc2-bdd7-485d-b621-7d59b1e16f68" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/ip/text-ui-test/EXPECTED.TXT" beforeDir="false" afterPath="$PROJECT_DIR$/ip/text-ui-test/EXPECTED.TXT" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ip/text-ui-test/input.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ip/text-ui-test/input.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ip/text-ui-test/EXPECTED.TXT" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ip/text-ui-test/input.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ip/text-ui-test/runtest.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ip/text-ui-test/runtest.sh" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,6 +42,9 @@
     &quot;accountId&quot;: &quot;9ffb47d9-b8d6-48b5-b0a7-f848564309ab&quot;
   }
 }</component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 3
 }</component>
@@ -64,8 +69,8 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/ip" />
       <recent name="$PROJECT_DIR$/src" />
+      <recent name="$PROJECT_DIR$/ip" />
     </key>
   </component>
   <component name="SharedIndexes">

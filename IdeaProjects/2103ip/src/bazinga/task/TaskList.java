@@ -1,3 +1,5 @@
+package bazinga.task;
+
 import java.util.ArrayList;
 
 public class TaskList {

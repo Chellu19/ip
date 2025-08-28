@@ -1,20 +1,22 @@
+package bazinga.task;
+
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 
-public class Event extends Task{
+public class Event extends Task {
     protected LocalDateTime from;
     protected LocalDateTime to;
     private static final DateTimeFormatter INPUT_FORMAT = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm");
     private static final DateTimeFormatter OUTPUT_FORMAT = DateTimeFormatter.ofPattern("MMM dd yyyy HH:mm");
 
     public Event(String description, String fromStr, String toStr) {
-        super(description, TaskType.EVENT);
+        super(description, Task.TaskType.EVENT);
         this.from = LocalDateTime.parse(fromStr, INPUT_FORMAT);
         this.to = LocalDateTime.parse(toStr, INPUT_FORMAT);
     }
 
     public Event(String description, boolean isDone, String fromStr, String toStr) {
-        super(description, TaskType.EVENT, isDone);
+        super(description, Task.TaskType.EVENT, isDone);
         this.from = LocalDateTime.parse(fromStr, INPUT_FORMAT);
         this.to = LocalDateTime.parse(toStr, INPUT_FORMAT);
     }

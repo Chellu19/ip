@@ -1,3 +1,10 @@
+package bazinga.storage;
+
+import bazinga.task.Deadline;
+import bazinga.task.Event;
+import bazinga.task.Task;
+import bazinga.task.Todo;
+
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;

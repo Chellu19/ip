@@ -1,5 +1,15 @@
+package bazinga;
+
+import bazinga.task.Deadline;
+import bazinga.task.Event;
+import bazinga.task.Task;
+import bazinga.command.Parser;
+import bazinga.ui.UI;
+import bazinga.storage.Storage;
+import bazinga.task.TaskList;
+import bazinga.task.TaskException;
+import bazinga.task.Todo;
 import java.util.ArrayList;
-import java.util.Scanner;
 
 public class BazingaBot {
     private static final String FILE_PATH = "./src/main/resources/bazinga.txt";

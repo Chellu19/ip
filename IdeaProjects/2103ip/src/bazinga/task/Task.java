@@ -1,3 +1,5 @@
+package bazinga.task;
+
 public abstract class Task {
     public enum TaskType {
         TODO,

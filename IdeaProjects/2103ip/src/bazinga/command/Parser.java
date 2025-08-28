@@ -1,3 +1,5 @@
+package bazinga.command;
+
 public class Parser {
     public static String[] parse(String input) {
         String[] parts = input.trim().split(" ", 2);

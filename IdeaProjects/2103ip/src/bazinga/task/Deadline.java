@@ -1,3 +1,5 @@
+package bazinga.task;
+
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 
@@ -9,12 +11,12 @@ public class Deadline extends Task {
     private static final DateTimeFormatter OUTPUT_FORMAT = DateTimeFormatter.ofPattern("MMM dd yyyy");
 
     public Deadline(String description, String byStr) {
-        super(description, TaskType.DEADLINE);
+        super(description, Task.TaskType.DEADLINE);
         this.by = LocalDate.parse(byStr, INPUT_FORMAT);;
     }
 
     public Deadline(String description, boolean isDone, String byStr) {
-        super(description, TaskType.DEADLINE, isDone);
+        super(description, Task.TaskType.DEADLINE, isDone);
         this.by = LocalDate.parse(byStr, INPUT_FORMAT);;
     }
 
