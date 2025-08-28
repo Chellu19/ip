@@ -11,7 +11,7 @@ public class Storage {
         this.filePath = filePath;
     }
 
-    public ArrayList<String> load() {
+    public ArrayList<Task> load() {
         ArrayList<Task> tasks = new ArrayList<>();
         File file = new File(filePath);
 
@@ -26,7 +26,7 @@ public class Storage {
             while(sc.hasNextLine()){
                 try{
                     String line = sc.nextLine();
-                    Task task = parseTask(link);
+                    Task task = parseTask(line);
                     if(task != null){
                         tasks.add(task);
                     }

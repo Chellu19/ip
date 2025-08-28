@@ -1,27 +1,32 @@
-public class Event extends Task{
-    protected String from;
-    protected String by;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 
-    public Event(String description, String from, String by) {
+public class Event extends Task{
+    protected LocalDateTime from;
+    protected LocalDateTime to;
+    private static final DateTimeFormatter INPUT_FORMAT = DateTimeFormatter.ofPattern("yyyy-MM-dd HHmm");
+    private static final DateTimeFormatter OUTPUT_FORMAT = DateTimeFormatter.ofPattern("MMM dd yyyy HH:mm");
+
+    public Event(String description, String fromStr, String toStr) {
         super(description, TaskType.EVENT);
-        this.from = from;
-        this.by = by;
+        this.from = LocalDateTime.parse(fromStr, INPUT_FORMAT);
+        this.to = LocalDateTime.parse(toStr, INPUT_FORMAT);
     }
 
-    public Event(String description, boolean isDone, String from, String by) {
+    public Event(String description, boolean isDone, String fromStr, String toStr) {
         super(description, TaskType.EVENT, isDone);
-        this.from = from;
-        this.by = by;
+        this.from = LocalDateTime.parse(fromStr, INPUT_FORMAT);
+        this.to = LocalDateTime.parse(toStr, INPUT_FORMAT);
     }
 
     @Override
     public String toString() {
-        return "[E]" + super.toString() + " (from: " + from + " to: " + by + ")";
+        return "[E]" + super.toString() + " (from: " + from.format(OUTPUT_FORMAT) + " to: " + to.format(OUTPUT_FORMAT) + ")";
     }
 
     @Override
     public String toSaveFormat() {
-        return "E | " + (isDone ? "1" : "0") + " | " + description + " | " + from + " | " + by;
+        return "E | " + (isDone ? "1" : "0") + " | " + description + " | " + from.format(INPUT_FORMAT) + " | " + to.format(INPUT_FORMAT);
     }
 }
 
