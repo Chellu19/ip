@@ -4,7 +4,7 @@ import java.time.format.DateTimeFormatter;
 public class Event extends Task{
     protected LocalDateTime from;
     protected LocalDateTime to;
-    private static final DateTimeFormatter INPUT_FORMAT = DateTimeFormatter.ofPattern("yyyy-MM-dd HHmm");
+    private static final DateTimeFormatter INPUT_FORMAT = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm");
     private static final DateTimeFormatter OUTPUT_FORMAT = DateTimeFormatter.ofPattern("MMM dd yyyy HH:mm");
 
     public Event(String description, String fromStr, String toStr) {

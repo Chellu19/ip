@@ -3,58 +3,65 @@ import java.util.Scanner;
 
 public class BazingaBot {
     private static final String FILE_PATH = "./src/main/resources/bazinga.txt";
-    public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("Hello from BazingaBot!\nHow may I assist you today?\n");
 
-        Storage storage = new Storage(FILE_PATH);
-        ArrayList<Task> tasks = storage.load();
+    private final UI ui;
+    private final Storage storage;
+    private final TaskList taskList;
+    public BazingaBot(String filePath) {
+        this.ui = new UI();
+        this.storage = new Storage(filePath);
+        this.taskList = new TaskList(storage.load());
+    }
+    public void run() {
+
+        ui.showMessage("Hello from BazingaBot!\nHow may I assist you today?\n");
 
         while (true) {
-            System.out.print("> ");  // Prompt
-            String input = scanner.nextLine().trim();
+            String input = ui.readLine();
+            if (input.isEmpty()) continue;
 
-            if (input.isEmpty()) continue; // ignore empty input
-
-            String[] parts = input.split(" ", 2);
+            String[] parts = Parser.parse(input);
             String command = parts[0].toLowerCase();
 
             try {
                 switch (command) {
                     case "todo":
-                        handleTodo(parts, tasks, storage);
+                        handleTodo(parts, taskList.getTasks(), storage);
                         break;
                     case "deadline":
-                        handleDeadline(parts, tasks, storage);
+                        handleDeadline(parts, taskList.getTasks(), storage);
                         break;
                     case "event":
-                        handleEvent(parts, tasks, storage);
+                        handleEvent(parts, taskList.getTasks(), storage);
                         break;
                     case "list":
-                        handleList(tasks);
+                        handleList(taskList.getTasks());
                         break;
                     case "mark":
                     case "unmark":
-                        handleMarkUnmark(parts, tasks, command, storage);
+                        handleMarkUnmark(parts, taskList.getTasks(), command, storage);
                         break;
                     case "delete":
-                        handleDelete(parts, tasks, storage);
+                        handleDelete(parts, taskList.getTasks(), storage);
                         break;
                     case "bye":
-                        System.out.println("Live long and prosper, Bye Bye!");
-                        scanner.close();
+                        ui.showGoodbye();
                         return;
                     default:
                         throw new TaskException("I only speak English, Klingon or Yiddish! Tell me what task clearly!");
                 }
             } catch (TaskException e) {
-                System.out.println(e.getMessage());
+                ui.showMessage(e.getMessage());
             } catch (NumberFormatException e) {
-                System.out.println("How I wish I could handle imaginary, complex numbers but no just R");
+                ui.showMessage("How I wish I could handle imaginary, complex numbers but no just R");
             } catch (ArrayIndexOutOfBoundsException e) {
-                System.out.println("Oops! Looks like something is missing in your input and your head.");
+                ui.showMessage("Oops! Looks like something is missing in your input and your head.");
             }
         }
+    }
+
+    public static void main(String[] args) {
+        new BazingaBot(FILE_PATH).run();
     }
 
     private static void handleTodo(String[] parts, ArrayList<Task> tasks, Storage storage) throws TaskException {
