@@ -1,4 +1,4 @@
-public class Task {
+public abstract class Task {
     public enum TaskType {
         TODO,
         DEADLINE,
@@ -13,6 +13,12 @@ public class Task {
         this.description = description;
         this.taskType = taskType;
         this.isDone = false;
+    }
+
+    public Task(String description, TaskType taskType, boolean isDone) {
+        this.description = description;
+        this.taskType = taskType;
+        this.isDone = isDone;
     }
 
     public String getStatusIcon() {
@@ -35,4 +41,6 @@ public class Task {
     public String toString() {
         return  getStatusIcon() + " " + description;
     }
+
+    public abstract String toSaveFormat();
 }
