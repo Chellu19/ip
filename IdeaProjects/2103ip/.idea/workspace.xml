@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="33f95fc2-bdd7-485d-b621-7d59b1e16f68" name="Changes" comment="">
+    <list default="true" id="33f95fc2-bdd7-485d-b621-7d59b1e16f68" name="Changes" comment="Add, List">
       <change beforePath="$PROJECT_DIR$/ip/text-ui-test/EXPECTED.TXT" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/ip/text-ui-test/input.txt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/ip/text-ui-test/runtest.bat" beforeDir="false" />
