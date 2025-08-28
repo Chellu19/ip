@@ -7,8 +7,18 @@ public class Deadline extends Task {
         this.by = by;
     }
 
+    public Deadline(String description, boolean isDone, String by) {
+        super(description, TaskType.DEADLINE, isDone);
+        this.by = by;
+    }
+
     @Override
     public String toString() {
         return "[D]" + super.toString() + " (by: " + by + ")";
+    }
+
+    @Override
+    public String toSaveFormat() {
+        return "D | " + (isDone ? "1" : "0") + " | " + description + " | " + by;
     }
 }

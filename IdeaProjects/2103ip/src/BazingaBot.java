@@ -2,11 +2,13 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class BazingaBot {
+    private static final String FILE_PATH = "./src/main/resources/bazinga.txt";
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Hello from BazingaBot!\nHow may I assist you today?\n");
 
-        ArrayList<Task> tasks = new ArrayList<>();
+        Storage storage = new Storage(FILE_PATH);
+        ArrayList<Task> tasks = storage.load();
 
         while (true) {
             System.out.print("> ");  // Prompt
@@ -20,23 +22,23 @@ public class BazingaBot {
             try {
                 switch (command) {
                     case "todo":
-                        handleTodo(parts, tasks);
+                        handleTodo(parts, tasks, storage);
                         break;
                     case "deadline":
-                        handleDeadline(parts, tasks);
+                        handleDeadline(parts, tasks, storage);
                         break;
                     case "event":
-                        handleEvent(parts, tasks);
+                        handleEvent(parts, tasks, storage);
                         break;
                     case "list":
                         handleList(tasks);
                         break;
                     case "mark":
                     case "unmark":
-                        handleMarkUnmark(parts, tasks, command);
+                        handleMarkUnmark(parts, tasks, command, storage);
                         break;
                     case "delete":
-                        handleDelete(parts, tasks);
+                        handleDelete(parts, tasks, storage);
                         break;
                     case "bye":
                         System.out.println("Live long and prosper, Bye Bye!");
@@ -55,7 +57,7 @@ public class BazingaBot {
         }
     }
 
-    private static void handleTodo(String[] parts, ArrayList<Task> tasks) throws TaskException {
+    private static void handleTodo(String[] parts, ArrayList<Task> tasks, Storage storage) throws TaskException {
         if (parts.length < 2 || parts[1].trim().isEmpty()) {
             throw new TaskException("I don't need sleep, I need answers. What task? Specify it please?");
         }
@@ -64,9 +66,10 @@ public class BazingaBot {
         tasks.add(newTodo);
         System.out.println("I have added to my eidetic memory: " + newTodo);
         System.out.println("There is now " + tasks.size() + " tasks to do. Go ahead procrastinate more.");
+        storage.save(tasks);
     }
 
-    private static void handleDeadline(String[] parts, ArrayList<Task> tasks) throws TaskException {
+    private static void handleDeadline(String[] parts, ArrayList<Task> tasks, Storage storage) throws TaskException {
         if (parts.length < 2 || parts[1].trim().isEmpty()) {
             throw new TaskException("Deadline description cannot be empty!");
         }
@@ -83,9 +86,10 @@ public class BazingaBot {
         tasks.add(newDeadline);
         System.out.println("I have added to my eidetic memory: " + newDeadline);
         System.out.println("There is now " + tasks.size() + " tasks to do. Go ahead procrastinate more.");
+        storage.save(tasks);
     }
 
-    private static void handleEvent(String[] parts, ArrayList<Task> tasks) throws TaskException {
+    private static void handleEvent(String[] parts, ArrayList<Task> tasks, Storage storage) throws TaskException {
         if (parts.length < 2 || parts[1].trim().isEmpty()) {
             throw new TaskException("Event description cannot be empty!");
         }
@@ -103,6 +107,7 @@ public class BazingaBot {
         tasks.add(newEvent);
         System.out.println("I have added to my eidetic memory: " + newEvent);
         System.out.println("There is now " + tasks.size() + " tasks to do. Go ahead procrastinate more.");
+        storage.save(tasks);
     }
 
     private static void handleList(ArrayList<Task> tasks) {
@@ -115,7 +120,7 @@ public class BazingaBot {
         }
     }
 
-    private static void handleMarkUnmark(String[] parts, ArrayList<Task> tasks, String command) throws TaskException {
+    private static void handleMarkUnmark(String[] parts, ArrayList<Task> tasks, String command, Storage storage) throws TaskException {
         if (parts.length < 2 || parts[1].trim().isEmpty()) {
             throw new TaskException("Please specify the task number to " + command + "!");
         }
@@ -126,12 +131,14 @@ public class BazingaBot {
 
         if (command.equals("mark")) {
             tasks.get(taskId).markAsDone();
+            storage.save(tasks);
         } else {
             tasks.get(taskId).markAsNotDone();
+            storage.save(tasks);
         }
     }
 
-    private static void handleDelete(String[] parts, ArrayList<Task> tasks) throws TaskException {
+    private static void handleDelete(String[] parts, ArrayList<Task> tasks, Storage storage) throws TaskException {
         if (parts.length < 2 || parts[1].trim().isEmpty()) {
             throw new TaskException("Please specify the task number to delete!");
         }
@@ -142,5 +149,6 @@ public class BazingaBot {
         Task removed = tasks.remove(taskId);
         System.out.println("Ok I have wiped this from my memory: " + removed);
         System.out.println("There are " + tasks.size() + " quests you have left fellow gladiator.");
+        storage.save(tasks);
     }
 }
