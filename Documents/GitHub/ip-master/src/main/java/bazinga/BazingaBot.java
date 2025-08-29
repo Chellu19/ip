@@ -11,17 +11,37 @@ import bazinga.task.TaskException;
 import bazinga.task.Todo;
 import java.util.ArrayList;
 
+/**
+ * BazingaBot is the main class for the task management application.
+ * It serves as the entry point and orchestrates the interaction between
+ * the user interface, storage system, and task management components.
+ * The bot supports various task operations including adding, listing,
+ * marking, unmarking, and deleting tasks.
+ */
 public class BazingaBot {
     private static final String FILE_PATH = "./src/main/resources/bazinga.txt";
 
     private final UI ui;
     private final Storage storage;
     private final TaskList taskList;
+
+    /**
+     * Constructs a BazingaBot instance with the specified file path for data storage.
+     * Initializes the user interface, storage system, and loads existing tasks.
+     *
+     * @param filePath the path to the file used for storing task data
+     */
     public BazingaBot(String filePath) {
         this.ui = new UI();
         this.storage = new Storage(filePath);
         this.taskList = new TaskList(storage.load());
     }
+
+    /**
+     * Starts the main execution loop of the BazingaBot application.
+     * Continuously reads user input, processes commands, and manages tasks
+     * until the user issues the exit command.
+     */
     public void run() {
 
         ui.showMessage("Hello from BazingaBot!\nHow may I assist you today?\n");
@@ -70,10 +90,25 @@ public class BazingaBot {
         }
     }
 
+    /**
+     * The main entry point of the BazingaBot application.
+     * Creates a new BazingaBot instance and starts the application.
+     *
+     * @param args command line arguments (not used)
+     */
     public static void main(String[] args) {
         new BazingaBot(FILE_PATH).run();
     }
 
+    /**
+     * Handles the creation and addition of a new Todo task.
+     * Validates input and saves the updated task list to storage.
+     *
+     * @param parts the parsed command parts from user input
+     * @param tasks the current list of tasks
+     * @param storage the storage component for persisting tasks
+     * @throws TaskException if the description is empty or invalid
+     */
     private static void handleTodo(String[] parts, ArrayList<Task> tasks, Storage storage) throws TaskException {
         if (parts.length < 2 || parts[1].trim().isEmpty()) {
             throw new TaskException("I don't need sleep, I need answers. What task? Specify it please?");
@@ -86,6 +121,15 @@ public class BazingaBot {
         storage.save(tasks);
     }
 
+    /**
+     * Handles the creation and addition of a new Deadline task.
+     * Validates input format and saves the updated task list to storage.
+     *
+     * @param parts the parsed command parts from user input
+     * @param tasks the current list of tasks
+     * @param storage the storage component for persisting tasks
+     * @throws TaskException if the description or deadline format is invalid
+     */
     private static void handleDeadline(String[] parts, ArrayList<Task> tasks, Storage storage) throws TaskException {
         if (parts.length < 2 || parts[1].trim().isEmpty()) {
             throw new TaskException("Deadline description cannot be empty!");
@@ -106,6 +150,15 @@ public class BazingaBot {
         storage.save(tasks);
     }
 
+    /**
+     * Handles the creation and addition of a new Event task.
+     * Validates input format and saves the updated task list to storage.
+     *
+     * @param parts the parsed command parts from user input
+     * @param tasks the current list of tasks
+     * @param storage the storage component for persisting tasks
+     * @throws TaskException if the description or time format is invalid
+     */
     private static void handleEvent(String[] parts, ArrayList<Task> tasks, Storage storage) throws TaskException {
         if (parts.length < 2 || parts[1].trim().isEmpty()) {
             throw new TaskException("Event description cannot be empty!");
@@ -127,6 +180,12 @@ public class BazingaBot {
         storage.save(tasks);
     }
 
+    /**
+     * Handles the listing of all current tasks.
+     * Displays all tasks in the list or a message if no tasks exist.
+     *
+     * @param tasks the current list of tasks to display
+     */
     private static void handleList(ArrayList<Task> tasks) {
         if (tasks.isEmpty()) {
             System.out.println("No tasks in memory. Relax, you have nothing to do!");
@@ -137,6 +196,16 @@ public class BazingaBot {
         }
     }
 
+    /**
+     * Handles marking or unmarking a task as done/not done.
+     * Validates the task number and updates the task status.
+     *
+     * @param parts the parsed command parts from user input
+     * @param tasks the current list of tasks
+     * @param command the specific command ("mark" or "unmark")
+     * @param storage the storage component for persisting tasks
+     * @throws TaskException if the task number is invalid or out of range
+     */
     private static void handleMarkUnmark(String[] parts, ArrayList<Task> tasks, String command, Storage storage) throws TaskException {
         if (parts.length < 2 || parts[1].trim().isEmpty()) {
             throw new TaskException("Please specify the task number to " + command + "!");
@@ -155,6 +224,15 @@ public class BazingaBot {
         }
     }
 
+    /**
+     * Handles the deletion of a task from the list.
+     * Validates the task number and removes the specified task.
+     *
+     * @param parts the parsed command parts from user input
+     * @param tasks the current list of tasks
+     * @param storage the storage component for persisting tasks
+     * @throws TaskException if the task number is invalid or out of range
+     */
     private static void handleDelete(String[] parts, ArrayList<Task> tasks, Storage storage) throws TaskException {
         if (parts.length < 2 || parts[1].trim().isEmpty()) {
             throw new TaskException("Please specify the task number to delete!");
