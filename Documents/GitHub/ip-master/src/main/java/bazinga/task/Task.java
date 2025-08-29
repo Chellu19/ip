@@ -39,6 +39,10 @@ public abstract class Task {
         System.out.println(getStatusIcon() + " " + description);
     }
 
+    public String getDescription() {
+        return this.description;
+    }
+
     @Override
     public String toString() {
         return  getStatusIcon() + " " + description;

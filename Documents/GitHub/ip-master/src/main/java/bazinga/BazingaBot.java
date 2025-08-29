@@ -51,6 +51,9 @@ public class BazingaBot {
                     case "unmark":
                         handleMarkUnmark(parts, taskList.getTasks(), command, storage);
                         break;
+                    case "find":
+                        handleFind(parts, taskList.getTasks());
+                        break;
                     case "delete":
                         handleDelete(parts, taskList.getTasks(), storage);
                         break;
@@ -155,6 +158,29 @@ public class BazingaBot {
         }
     }
 
+    private static void handleFind(String[] parts, ArrayList<Task> tasks) throws TaskException {
+        if(parts.length < 2 || parts[1].trim().isEmpty()) {
+            throw new TaskException("Please specify a keyword to find!!! I am not a Mind Reader");
+        }
+        String keyword = parts[1].trim().toLowerCase();
+        ArrayList<Task> foundTasks = new ArrayList<>();
+        for (Task task : tasks) {
+            if (task.getDescription().toLowerCase().contains(keyword)) {
+                foundTasks.add(task);
+            }
+        }
+
+        System.out.println("___________________________________________________________");
+        if (foundTasks.isEmpty()) {
+            System.out.println("No tasks found. Are you sure you want to find this?");
+        } else {
+            System.out.println("Here are the hits I got:");
+            for (int i = 0; i < foundTasks.size(); i++) {
+                System.out.println((i + 1) + ". " + foundTasks.get(i));
+            }
+        }
+        System.out.println("___________________________________________________________");
+    }
     private static void handleDelete(String[] parts, ArrayList<Task> tasks, Storage storage) throws TaskException {
         if (parts.length < 2 || parts[1].trim().isEmpty()) {
             throw new TaskException("Please specify the task number to delete!");
