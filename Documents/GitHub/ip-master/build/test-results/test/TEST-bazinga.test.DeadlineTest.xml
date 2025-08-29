@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="bazinga.test.DeadlineTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2025-08-29T01:21:27" hostname="Chellappans-MacBook-Pro.local" time="0.002">
+<testsuite name="bazinga.test.DeadlineTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2025-08-29T01:29:42" hostname="Chellappans-MacBook-Pro.local" time="0.017">
   <properties/>
-  <testcase name="testToString_correctFormat()" classname="bazinga.test.DeadlineTest" time="0.001"/>
-  <testcase name="testToSaveFormat_done()" classname="bazinga.test.DeadlineTest" time="0.0"/>
-  <testcase name="testToSaveFormat_notDone()" classname="bazinga.test.DeadlineTest" time="0.0"/>
+  <testcase name="testToString_correctFormat()" classname="bazinga.test.DeadlineTest" time="0.014"/>
+  <testcase name="testToSaveFormat_done()" classname="bazinga.test.DeadlineTest" time="0.002"/>
+  <testcase name="testToSaveFormat_notDone()" classname="bazinga.test.DeadlineTest" time="0.001"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

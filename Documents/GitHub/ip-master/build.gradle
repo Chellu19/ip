@@ -4,6 +4,19 @@ plugins {
     id 'com.github.johnrengelman.shadow' version '7.1.2'
 }
 
+mainClassName = 'bazinga.BazingaBot';
+
+jar {
+    manifest {
+        attributes(
+                'Main-Class': 'bazinga.BazingaBot'
+        )
+    } from {
+        configurations.runtimeClasspath.collect {it.isDirectory() ? it : zipTree(it)}
+    }
+    duplicatesStrategy = DuplicatesStrategy.EXCLUDE
+}
+
 repositories {
     mavenCentral()
 }
@@ -33,7 +46,7 @@ application {
 }
 
 shadowJar {
-    archiveBaseName = "duke"
+    archiveBaseName = "bazinga"
     archiveClassifier = null
 }
 
