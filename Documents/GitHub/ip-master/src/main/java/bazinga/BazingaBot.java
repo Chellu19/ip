@@ -71,6 +71,9 @@ public class BazingaBot {
                     case "unmark":
                         handleMarkUnmark(parts, taskList.getTasks(), command, storage);
                         break;
+                    case "find":
+                        handleFind(parts, taskList.getTasks());
+                        break;
                     case "delete":
                         handleDelete(parts, taskList.getTasks(), storage);
                         break;
@@ -222,6 +225,39 @@ public class BazingaBot {
             tasks.get(taskId).markAsNotDone();
             storage.save(tasks);
         }
+    }
+
+    /**
+     * Handles the "find" command to search for tasks containing a specific keyword.
+     * Searches the current list of tasks and prints all tasks whose descriptions
+     * contain the provided keyword (case-insensitive).
+     *
+     * @param parts an array of command parts, where parts[1] should contain the keyword
+     * @param tasks the current list of tasks to search within
+     * @throws TaskException if no keyword is provided in the command
+     */
+    private static void handleFind(String[] parts, ArrayList<Task> tasks) throws TaskException {
+        if(parts.length < 2 || parts[1].trim().isEmpty()) {
+            throw new TaskException("Please specify a keyword to find!!! I am not a Mind Reader");
+        }
+        String keyword = parts[1].trim().toLowerCase();
+        ArrayList<Task> foundTasks = new ArrayList<>();
+        for (Task task : tasks) {
+            if (task.getDescription().toLowerCase().contains(keyword)) {
+                foundTasks.add(task);
+            }
+        }
+
+        System.out.println("___________________________________________________________");
+        if (foundTasks.isEmpty()) {
+            System.out.println("No tasks found. Are you sure you want to find this?");
+        } else {
+            System.out.println("Here are the hits I got:");
+            for (int i = 0; i < foundTasks.size(); i++) {
+                System.out.println((i + 1) + ". " + foundTasks.get(i));
+            }
+        }
+        System.out.println("___________________________________________________________");
     }
 
     /**
