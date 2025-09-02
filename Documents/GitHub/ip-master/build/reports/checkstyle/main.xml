@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<checkstyle version="10.17.0">
+<file name="/Users/chellu/Documents/GitHub/ip-master/src/main/java/bazinga/ui/UI.java">
+<error line="5" column="1" severity="error" message="Missing a Javadoc comment." source="com.puppycrawl.tools.checkstyle.checks.javadoc.MissingJavadocTypeCheck"/>
+<error line="12" column="17" severity="error" message="Name &apos;Welcome&apos; must match pattern &apos;^[a-z][a-zA-Z0-9]*(_[a-z][a-zA-Z0-9]+){0,2}$&apos;." source="com.puppycrawl.tools.checkstyle.checks.naming.MethodNameCheck"/>
+<error line="16" column="5" severity="error" message="Missing a Javadoc comment." source="com.puppycrawl.tools.checkstyle.checks.javadoc.MissingJavadocMethodCheck"/>
+<error line="25" column="5" severity="error" message="Missing a Javadoc comment." source="com.puppycrawl.tools.checkstyle.checks.javadoc.MissingJavadocMethodCheck"/>
+</file>
+<file name="/Users/chellu/Documents/GitHub/ip-master/src/main/java/bazinga/storage/Storage.java">
+<error line="8" column="1" severity="error" message="Import statement for &apos;java.io.File&apos; is in the wrong order. Should be in the &apos;STANDARD_JAVA_PACKAGE&apos; group, expecting not assigned imports on this line." source="com.puppycrawl.tools.checkstyle.checks.imports.CustomImportOrderCheck"/>
+<error line="9" column="1" severity="error" message="Import statement for &apos;java.io.FileWriter&apos; is in the wrong order. Should be in the &apos;STANDARD_JAVA_PACKAGE&apos; group, expecting not assigned imports on this line." source="com.puppycrawl.tools.checkstyle.checks.imports.CustomImportOrderCheck"/>
+<error line="10" column="1" severity="error" message="Import statement for &apos;java.io.IOException&apos; is in the wrong order. Should be in the &apos;STANDARD_JAVA_PACKAGE&apos; group, expecting not assigned imports on this line." source="com.puppycrawl.tools.checkstyle.checks.imports.CustomImportOrderCheck"/>
+<error line="11" column="1" severity="error" message="Import statement for &apos;java.util.ArrayList&apos; is in the wrong order. Should be in the &apos;STANDARD_JAVA_PACKAGE&apos; group, expecting not assigned imports on this line." source="com.puppycrawl.tools.checkstyle.checks.imports.CustomImportOrderCheck"/>
+<error line="12" column="1" severity="error" message="Import statement for &apos;java.util.Scanner&apos; is in the wrong order. Should be in the &apos;STANDARD_JAVA_PACKAGE&apos; group, expecting not assigned imports on this line." source="com.puppycrawl.tools.checkstyle.checks.imports.CustomImportOrderCheck"/>
+<error line="14" column="1" severity="error" message="Missing a Javadoc comment." source="com.puppycrawl.tools.checkstyle.checks.javadoc.MissingJavadocTypeCheck"/>
+<error line="21" column="5" severity="error" message="Missing a Javadoc comment." source="com.puppycrawl.tools.checkstyle.checks.javadoc.MissingJavadocMethodCheck"/>
+<error line="25" column="9" severity="error" message="&apos;try&apos; is not followed by whitespace." source="com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck"/>
+<error line="25" column="12" severity="error" message="&apos;{&apos; is not preceded with whitespace." source="com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck"/>
+<error line="26" column="13" severity="error" message="&apos;if&apos; is not followed by whitespace." source="com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck"/>
+<error line="26" column="31" severity="error" message="&apos;{&apos; is not preceded with whitespace." source="com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck"/>
+<error line="33" column="13" severity="error" message="&apos;while&apos; is not followed by whitespace." source="com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck"/>
+<error line="33" column="36" severity="error" message="&apos;{&apos; is not preceded with whitespace." source="com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck"/>
+<error line="34" column="17" severity="error" message="&apos;try&apos; is not followed by whitespace." source="com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck"/>
+<error line="34" column="20" severity="error" message="&apos;{&apos; is not preceded with whitespace." source="com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck"/>
+<error line="37" column="21" severity="error" message="&apos;if&apos; is not followed by whitespace." source="com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck"/>
+<error line="37" column="37" severity="error" message="&apos;{&apos; is not preceded with whitespace." source="com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck"/>
+<error line="51" column="5" severity="error" message="Missing a Javadoc comment." source="com.puppycrawl.tools.checkstyle.checks.javadoc.MissingJavadocMethodCheck"/>
+<error line="52" column="9" severity="error" message="&apos;try&apos; is not followed by whitespace." source="com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck"/>
+<error line="52" column="12" severity="error" message="&apos;{&apos; is not preceded with whitespace." source="com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck"/>
+<error line="54" column="13" severity="error" message="&apos;for&apos; is not followed by whitespace." source="com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck"/>
+<error line="54" column="35" severity="error" message="&apos;{&apos; is not preceded with whitespace." source="com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck"/>
+<error line="76" column="17" severity="error" message="&apos;if&apos; construct must use &apos;{}&apos;s." source="com.puppycrawl.tools.checkstyle.checks.blocks.NeedBracesCheck"/>
+<error line="80" column="17" severity="error" message="&apos;if&apos; construct must use &apos;{}&apos;s." source="com.puppycrawl.tools.checkstyle.checks.blocks.NeedBracesCheck"/>
+</file>
+<file name="/Users/chellu/Documents/GitHub/ip-master/src/main/java/bazinga/BazingaBot.java">
+<error line="6" column="1" severity="error" message="Wrong lexicographical order for &apos;bazinga.command.Parser&apos; import. Should be before &apos;bazinga.task.Task&apos;." source="com.puppycrawl.tools.checkstyle.checks.imports.CustomImportOrderCheck"/>
+<error line="8" column="1" severity="error" message="Wrong lexicographical order for &apos;bazinga.storage.Storage&apos; import. Should be before &apos;bazinga.ui.UI&apos;." source="com.puppycrawl.tools.checkstyle.checks.imports.CustomImportOrderCheck"/>
+<error line="9" column="1" severity="error" message="Wrong lexicographical order for &apos;bazinga.task.TaskList&apos; import. Should be before &apos;bazinga.ui.UI&apos;." source="com.puppycrawl.tools.checkstyle.checks.imports.CustomImportOrderCheck"/>
+<error line="10" column="1" severity="error" message="Wrong lexicographical order for &apos;bazinga.task.TaskException&apos; import. Should be before &apos;bazinga.ui.UI&apos;." source="com.puppycrawl.tools.checkstyle.checks.imports.CustomImportOrderCheck"/>
+<error line="11" column="1" severity="error" message="Wrong lexicographical order for &apos;bazinga.task.Todo&apos; import. Should be before &apos;bazinga.ui.UI&apos;." source="com.puppycrawl.tools.checkstyle.checks.imports.CustomImportOrderCheck"/>
+<error line="12" column="1" severity="error" message="Import statement for &apos;java.util.ArrayList&apos; is in the wrong order. Should be in the &apos;STANDARD_JAVA_PACKAGE&apos; group, expecting not assigned imports on this line." source="com.puppycrawl.tools.checkstyle.checks.imports.CustomImportOrderCheck"/>
+<error line="51" column="13" severity="error" message="&apos;if&apos; construct must use &apos;{}&apos;s." source="com.puppycrawl.tools.checkstyle.checks.blocks.NeedBracesCheck"/>
+<error line="212" severity="error" message="Line is longer than 120 characters (found 135)." source="com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"/>
+<error line="240" column="9" severity="error" message="&apos;if&apos; is not followed by whitespace." source="com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck"/>
+</file>
+<file name="/Users/chellu/Documents/GitHub/ip-master/src/main/java/bazinga/Main.java">
+<error line="1" severity="error" message="File does not end with a newline." source="com.puppycrawl.tools.checkstyle.checks.NewlineAtEndOfFileCheck"/>
+<error line="5" column="1" severity="error" message="Missing a Javadoc comment." source="com.puppycrawl.tools.checkstyle.checks.javadoc.MissingJavadocTypeCheck"/>
+<error line="12" severity="error" message="Line is longer than 120 characters (found 159)." source="com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"/>
+</file>
+<file name="/Users/chellu/Documents/GitHub/ip-master/src/main/java/bazinga/task/TaskList.java">
+<error line="5" column="1" severity="error" message="Missing a Javadoc comment." source="com.puppycrawl.tools.checkstyle.checks.javadoc.MissingJavadocTypeCheck"/>
+</file>
+<file name="/Users/chellu/Documents/GitHub/ip-master/src/main/java/bazinga/task/TaskException.java">
+<error line="3" column="1" severity="error" message="Missing a Javadoc comment." source="com.puppycrawl.tools.checkstyle.checks.javadoc.MissingJavadocTypeCheck"/>
+</file>
+<file name="/Users/chellu/Documents/GitHub/ip-master/src/main/java/bazinga/task/Event.java">
+<error line="8" column="1" severity="error" message="Javadoc content should start from the next line after /**." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocContentLocationCheck"/>
+<error line="9" severity="error" message="Javadoc line should start with leading asterisk." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMissingLeadingAsteriskCheck"/>
+<error line="10" severity="error" message="Javadoc line should start with leading asterisk." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMissingLeadingAsteriskCheck"/>
+<error line="11" severity="error" message="Javadoc line should start with leading asterisk." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMissingLeadingAsteriskCheck"/>
+<error line="12" severity="error" message="Javadoc line should start with leading asterisk." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMissingLeadingAsteriskCheck"/>
+<error line="13" severity="error" message="Javadoc line should start with leading asterisk." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMissingLeadingAsteriskCheck"/>
+<error line="14" severity="error" message="Javadoc line should start with leading asterisk." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMissingLeadingAsteriskCheck"/>
+<error line="15" severity="error" message="Javadoc line should start with leading asterisk." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMissingLeadingAsteriskCheck"/>
+<error line="16" severity="error" message="Javadoc line should start with leading asterisk." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMissingLeadingAsteriskCheck"/>
+<error line="17" severity="error" message="Javadoc line should start with leading asterisk." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMissingLeadingAsteriskCheck"/>
+<error line="18" severity="error" message="Javadoc line should start with leading asterisk." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMissingLeadingAsteriskCheck"/>
+<error line="19" severity="error" message="Javadoc line should start with leading asterisk." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMissingLeadingAsteriskCheck"/>
+<error line="20" severity="error" message="Javadoc line should start with leading asterisk." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMissingLeadingAsteriskCheck"/>
+<error line="21" severity="error" message="Javadoc line should start with leading asterisk." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMissingLeadingAsteriskCheck"/>
+<error line="22" severity="error" message="Javadoc line should start with leading asterisk." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMissingLeadingAsteriskCheck"/>
+<error line="27" column="5" severity="error" message="Static variable definition in wrong order." source="com.puppycrawl.tools.checkstyle.checks.coding.DeclarationOrderCheck"/>
+<error line="28" column="5" severity="error" message="Static variable definition in wrong order." source="com.puppycrawl.tools.checkstyle.checks.coding.DeclarationOrderCheck"/>
+<error line="30" column="5" severity="error" message="Javadoc content should start from the next line after /**." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocContentLocationCheck"/>
+<error line="31" severity="error" message="Javadoc line should start with leading asterisk." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMissingLeadingAsteriskCheck"/>
+<error line="32" severity="error" message="Javadoc line should start with leading asterisk." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMissingLeadingAsteriskCheck"/>
+<error line="33" severity="error" message="Javadoc line should start with leading asterisk." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMissingLeadingAsteriskCheck"/>
+<error line="34" severity="error" message="Javadoc line should start with leading asterisk." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMissingLeadingAsteriskCheck"/>
+<error line="35" severity="error" message="Javadoc line should start with leading asterisk." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMissingLeadingAsteriskCheck"/>
+<error line="36" severity="error" message="Javadoc line should start with leading asterisk." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMissingLeadingAsteriskCheck"/>
+<error line="37" severity="error" message="Javadoc line should start with leading asterisk." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMissingLeadingAsteriskCheck"/>
+<error line="38" severity="error" message="Javadoc line should start with leading asterisk." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMissingLeadingAsteriskCheck"/>
+<error line="39" severity="error" message="Javadoc line should start with leading asterisk." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMissingLeadingAsteriskCheck"/>
+<error line="40" severity="error" message="Javadoc line should start with leading asterisk." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMissingLeadingAsteriskCheck"/>
+<error line="41" severity="error" message="Javadoc line should start with leading asterisk." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMissingLeadingAsteriskCheck"/>
+<error line="42" severity="error" message="Javadoc line should start with leading asterisk." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMissingLeadingAsteriskCheck"/>
+<error line="51" column="5" severity="error" message="Javadoc content should start from the next line after /**." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocContentLocationCheck"/>
+<error line="52" severity="error" message="Javadoc line should start with leading asterisk." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMissingLeadingAsteriskCheck"/>
+<error line="53" severity="error" message="Javadoc line should start with leading asterisk." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMissingLeadingAsteriskCheck"/>
+<error line="54" severity="error" message="Javadoc line should start with leading asterisk." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMissingLeadingAsteriskCheck"/>
+<error line="55" severity="error" message="Javadoc line should start with leading asterisk." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMissingLeadingAsteriskCheck"/>
+<error line="56" severity="error" message="Javadoc line should start with leading asterisk." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMissingLeadingAsteriskCheck"/>
+<error line="57" severity="error" message="Javadoc line should start with leading asterisk." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMissingLeadingAsteriskCheck"/>
+<error line="58" severity="error" message="Javadoc line should start with leading asterisk." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMissingLeadingAsteriskCheck"/>
+<error line="59" severity="error" message="Javadoc line should start with leading asterisk." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMissingLeadingAsteriskCheck"/>
+<error line="60" severity="error" message="Javadoc line should start with leading asterisk." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMissingLeadingAsteriskCheck"/>
+<error line="61" severity="error" message="Javadoc line should start with leading asterisk." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMissingLeadingAsteriskCheck"/>
+<error line="62" severity="error" message="Javadoc line should start with leading asterisk." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMissingLeadingAsteriskCheck"/>
+<error line="63" severity="error" message="Javadoc line should start with leading asterisk." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMissingLeadingAsteriskCheck"/>
+<error line="64" severity="error" message="Javadoc line should start with leading asterisk." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMissingLeadingAsteriskCheck"/>
+<error line="65" severity="error" message="Javadoc line should start with leading asterisk." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMissingLeadingAsteriskCheck"/>
+<error line="75" column="5" severity="error" message="Javadoc content should start from the next line after /**." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocContentLocationCheck"/>
+<error line="76" severity="error" message="Javadoc line should start with leading asterisk." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMissingLeadingAsteriskCheck"/>
+<error line="77" severity="error" message="Javadoc line should start with leading asterisk." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMissingLeadingAsteriskCheck"/>
+<error line="78" severity="error" message="Javadoc line should start with leading asterisk." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMissingLeadingAsteriskCheck"/>
+<error line="79" severity="error" message="Javadoc line should start with leading asterisk." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMissingLeadingAsteriskCheck"/>
+<error line="80" severity="error" message="Javadoc line should start with leading asterisk." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMissingLeadingAsteriskCheck"/>
+<error line="81" severity="error" message="Javadoc line should start with leading asterisk." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMissingLeadingAsteriskCheck"/>
+<error line="82" severity="error" message="Javadoc line should start with leading asterisk." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMissingLeadingAsteriskCheck"/>
+<error line="83" severity="error" message="Javadoc line should start with leading asterisk." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMissingLeadingAsteriskCheck"/>
+<error line="87" severity="error" message="Line is longer than 120 characters (found 125)." source="com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"/>
+<error line="90" column="5" severity="error" message="Javadoc content should start from the next line after /**." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocContentLocationCheck"/>
+<error line="91" severity="error" message="Javadoc line should start with leading asterisk." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMissingLeadingAsteriskCheck"/>
+<error line="92" severity="error" message="Javadoc line should start with leading asterisk." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMissingLeadingAsteriskCheck"/>
+<error line="93" severity="error" message="Javadoc line should start with leading asterisk." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMissingLeadingAsteriskCheck"/>
+<error line="94" severity="error" message="Javadoc line should start with leading asterisk." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMissingLeadingAsteriskCheck"/>
+<error line="95" severity="error" message="Javadoc line should start with leading asterisk." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMissingLeadingAsteriskCheck"/>
+<error line="96" severity="error" message="Javadoc line should start with leading asterisk." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMissingLeadingAsteriskCheck"/>
+<error line="97" severity="error" message="Javadoc line should start with leading asterisk." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMissingLeadingAsteriskCheck"/>
+<error line="98" severity="error" message="Javadoc line should start with leading asterisk." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMissingLeadingAsteriskCheck"/>
+<error line="102" severity="error" message="Line is longer than 120 characters (found 137)." source="com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"/>
+</file>
+<file name="/Users/chellu/Documents/GitHub/ip-master/src/main/java/bazinga/task/Task.java">
+<error line="1" severity="error" message="File does not end with a newline." source="com.puppycrawl.tools.checkstyle.checks.NewlineAtEndOfFileCheck"/>
+<error line="3" column="1" severity="error" message="Missing a Javadoc comment." source="com.puppycrawl.tools.checkstyle.checks.javadoc.MissingJavadocTypeCheck"/>
+<error line="4" column="5" severity="error" message="Missing a Javadoc comment." source="com.puppycrawl.tools.checkstyle.checks.javadoc.MissingJavadocTypeCheck"/>
+<error line="14" column="5" severity="error" message="Missing a Javadoc comment." source="com.puppycrawl.tools.checkstyle.checks.javadoc.MissingJavadocMethodCheck"/>
+<error line="20" column="5" severity="error" message="Missing a Javadoc comment." source="com.puppycrawl.tools.checkstyle.checks.javadoc.MissingJavadocMethodCheck"/>
+<error line="30" column="5" severity="error" message="Missing a Javadoc comment." source="com.puppycrawl.tools.checkstyle.checks.javadoc.MissingJavadocMethodCheck"/>
+<error line="36" column="5" severity="error" message="Missing a Javadoc comment." source="com.puppycrawl.tools.checkstyle.checks.javadoc.MissingJavadocMethodCheck"/>
+<error line="48" column="17" severity="error" message="Use a single space to separate non-whitespace characters." source="com.puppycrawl.tools.checkstyle.checks.whitespace.SingleSpaceSeparatorCheck"/>
+</file>
+<file name="/Users/chellu/Documents/GitHub/ip-master/src/main/java/bazinga/task/Deadline.java">
+<error line="7" column="1" severity="error" message="Javadoc content should start from the next line after /**." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocContentLocationCheck"/>
+<error line="8" severity="error" message="Javadoc line should start with leading asterisk." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMissingLeadingAsteriskCheck"/>
+<error line="9" severity="error" message="Javadoc line should start with leading asterisk." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMissingLeadingAsteriskCheck"/>
+<error line="10" severity="error" message="Javadoc line should start with leading asterisk." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMissingLeadingAsteriskCheck"/>
+<error line="11" severity="error" message="Javadoc line should start with leading asterisk." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMissingLeadingAsteriskCheck"/>
+<error line="12" severity="error" message="Javadoc line should start with leading asterisk." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMissingLeadingAsteriskCheck"/>
+<error line="13" severity="error" message="Javadoc line should start with leading asterisk." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMissingLeadingAsteriskCheck"/>
+<error line="14" severity="error" message="Javadoc line should start with leading asterisk." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMissingLeadingAsteriskCheck"/>
+<error line="15" severity="error" message="Javadoc line should start with leading asterisk." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMissingLeadingAsteriskCheck"/>
+<error line="16" severity="error" message="Javadoc line should start with leading asterisk." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMissingLeadingAsteriskCheck"/>
+<error line="17" severity="error" message="Javadoc line should start with leading asterisk." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMissingLeadingAsteriskCheck"/>
+<error line="18" severity="error" message="Javadoc line should start with leading asterisk." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMissingLeadingAsteriskCheck"/>
+<error line="19" severity="error" message="Javadoc line should start with leading asterisk." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMissingLeadingAsteriskCheck"/>
+<error line="20" severity="error" message="Javadoc line should start with leading asterisk." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMissingLeadingAsteriskCheck"/>
+<error line="21" severity="error" message="Javadoc line should start with leading asterisk." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMissingLeadingAsteriskCheck"/>
+<error line="27" column="5" severity="error" message="Static variable definition in wrong order." source="com.puppycrawl.tools.checkstyle.checks.coding.DeclarationOrderCheck"/>
+<error line="28" column="5" severity="error" message="Static variable definition in wrong order." source="com.puppycrawl.tools.checkstyle.checks.coding.DeclarationOrderCheck"/>
+<error line="30" column="5" severity="error" message="Javadoc content should start from the next line after /**." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocContentLocationCheck"/>
+<error line="31" severity="error" message="Javadoc line should start with leading asterisk." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMissingLeadingAsteriskCheck"/>
+<error line="32" severity="error" message="Javadoc line should start with leading asterisk." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMissingLeadingAsteriskCheck"/>
+<error line="33" severity="error" message="Javadoc line should start with leading asterisk." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMissingLeadingAsteriskCheck"/>
+<error line="34" severity="error" message="Javadoc line should start with leading asterisk." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMissingLeadingAsteriskCheck"/>
+<error line="35" severity="error" message="Javadoc line should start with leading asterisk." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMissingLeadingAsteriskCheck"/>
+<error line="36" severity="error" message="Javadoc line should start with leading asterisk." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMissingLeadingAsteriskCheck"/>
+<error line="37" severity="error" message="Javadoc line should start with leading asterisk." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMissingLeadingAsteriskCheck"/>
+<error line="38" severity="error" message="Javadoc line should start with leading asterisk." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMissingLeadingAsteriskCheck"/>
+<error line="39" severity="error" message="Javadoc line should start with leading asterisk." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMissingLeadingAsteriskCheck"/>
+<error line="40" severity="error" message="Javadoc line should start with leading asterisk." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMissingLeadingAsteriskCheck"/>
+<error line="47" column="5" severity="error" message="Javadoc content should start from the next line after /**." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocContentLocationCheck"/>
+<error line="48" severity="error" message="Javadoc line should start with leading asterisk." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMissingLeadingAsteriskCheck"/>
+<error line="49" severity="error" message="Javadoc line should start with leading asterisk." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMissingLeadingAsteriskCheck"/>
+<error line="50" severity="error" message="Javadoc line should start with leading asterisk." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMissingLeadingAsteriskCheck"/>
+<error line="51" severity="error" message="Javadoc line should start with leading asterisk." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMissingLeadingAsteriskCheck"/>
+<error line="52" severity="error" message="Javadoc line should start with leading asterisk." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMissingLeadingAsteriskCheck"/>
+<error line="53" severity="error" message="Javadoc line should start with leading asterisk." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMissingLeadingAsteriskCheck"/>
+<error line="54" severity="error" message="Javadoc line should start with leading asterisk." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMissingLeadingAsteriskCheck"/>
+<error line="55" severity="error" message="Javadoc line should start with leading asterisk." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMissingLeadingAsteriskCheck"/>
+<error line="56" severity="error" message="Javadoc line should start with leading asterisk." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMissingLeadingAsteriskCheck"/>
+<error line="57" severity="error" message="Javadoc line should start with leading asterisk." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMissingLeadingAsteriskCheck"/>
+<error line="58" severity="error" message="Javadoc line should start with leading asterisk." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMissingLeadingAsteriskCheck"/>
+<error line="59" severity="error" message="Javadoc line should start with leading asterisk." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMissingLeadingAsteriskCheck"/>
+<error line="66" column="5" severity="error" message="Javadoc content should start from the next line after /**." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocContentLocationCheck"/>
+<error line="67" severity="error" message="Javadoc line should start with leading asterisk." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMissingLeadingAsteriskCheck"/>
+<error line="68" severity="error" message="Javadoc line should start with leading asterisk." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMissingLeadingAsteriskCheck"/>
+<error line="69" severity="error" message="Javadoc line should start with leading asterisk." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMissingLeadingAsteriskCheck"/>
+<error line="70" severity="error" message="Javadoc line should start with leading asterisk." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMissingLeadingAsteriskCheck"/>
+<error line="71" severity="error" message="Javadoc line should start with leading asterisk." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMissingLeadingAsteriskCheck"/>
+<error line="72" severity="error" message="Javadoc line should start with leading asterisk." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMissingLeadingAsteriskCheck"/>
+<error line="73" severity="error" message="Javadoc line should start with leading asterisk." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMissingLeadingAsteriskCheck"/>
+<error line="74" severity="error" message="Javadoc line should start with leading asterisk." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMissingLeadingAsteriskCheck"/>
+<error line="81" column="5" severity="error" message="Javadoc content should start from the next line after /**." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocContentLocationCheck"/>
+<error line="82" severity="error" message="Javadoc line should start with leading asterisk." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMissingLeadingAsteriskCheck"/>
+<error line="83" severity="error" message="Javadoc line should start with leading asterisk." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMissingLeadingAsteriskCheck"/>
+<error line="84" severity="error" message="Javadoc line should start with leading asterisk." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMissingLeadingAsteriskCheck"/>
+<error line="85" severity="error" message="Javadoc line should start with leading asterisk." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMissingLeadingAsteriskCheck"/>
+<error line="86" severity="error" message="Javadoc line should start with leading asterisk." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMissingLeadingAsteriskCheck"/>
+<error line="87" severity="error" message="Javadoc line should start with leading asterisk." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMissingLeadingAsteriskCheck"/>
+<error line="88" severity="error" message="Javadoc line should start with leading asterisk." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMissingLeadingAsteriskCheck"/>
+<error line="89" severity="error" message="Javadoc line should start with leading asterisk." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMissingLeadingAsteriskCheck"/>
+</file>
+<file name="/Users/chellu/Documents/GitHub/ip-master/src/main/java/bazinga/task/Todo.java">
+<error line="1" severity="error" message="File does not end with a newline." source="com.puppycrawl.tools.checkstyle.checks.NewlineAtEndOfFileCheck"/>
+<error line="3" column="8" severity="error" message="Unused import - java.time.format.DateTimeParseException." source="com.puppycrawl.tools.checkstyle.checks.imports.UnusedImportsCheck"/>
+<error line="5" column="1" severity="error" message="Javadoc content should start from the next line after /**." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocContentLocationCheck"/>
+<error line="6" severity="error" message="Javadoc line should start with leading asterisk." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMissingLeadingAsteriskCheck"/>
+<error line="7" severity="error" message="Javadoc line should start with leading asterisk." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMissingLeadingAsteriskCheck"/>
+<error line="8" severity="error" message="Javadoc line should start with leading asterisk." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMissingLeadingAsteriskCheck"/>
+<error line="9" severity="error" message="Javadoc line should start with leading asterisk." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMissingLeadingAsteriskCheck"/>
+<error line="10" severity="error" message="Javadoc line should start with leading asterisk." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMissingLeadingAsteriskCheck"/>
+<error line="11" severity="error" message="Javadoc line should start with leading asterisk." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMissingLeadingAsteriskCheck"/>
+<error line="12" severity="error" message="Javadoc line should start with leading asterisk." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMissingLeadingAsteriskCheck"/>
+<error line="13" severity="error" message="Javadoc line should start with leading asterisk." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMissingLeadingAsteriskCheck"/>
+<error line="14" severity="error" message="Javadoc line should start with leading asterisk." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMissingLeadingAsteriskCheck"/>
+<error line="15" severity="error" message="Javadoc line should start with leading asterisk." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMissingLeadingAsteriskCheck"/>
+<error line="19" severity="error" message="Javadoc line should start with leading asterisk." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMissingLeadingAsteriskCheck"/>
+<error line="20" severity="error" message="Javadoc line should start with leading asterisk." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMissingLeadingAsteriskCheck"/>
+<error line="21" severity="error" message="Javadoc line should start with leading asterisk." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMissingLeadingAsteriskCheck"/>
+<error line="28" severity="error" message="Javadoc line should start with leading asterisk." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMissingLeadingAsteriskCheck"/>
+<error line="29" severity="error" message="Javadoc line should start with leading asterisk." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMissingLeadingAsteriskCheck"/>
+<error line="30" severity="error" message="Javadoc line should start with leading asterisk." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMissingLeadingAsteriskCheck"/>
+<error line="31" severity="error" message="Javadoc line should start with leading asterisk." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMissingLeadingAsteriskCheck"/>
+<error line="32" severity="error" message="Javadoc line should start with leading asterisk." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMissingLeadingAsteriskCheck"/>
+<error line="39" column="5" severity="error" message="Javadoc content should start from the next line after /**." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocContentLocationCheck"/>
+<error line="40" severity="error" message="Javadoc line should start with leading asterisk." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMissingLeadingAsteriskCheck"/>
+<error line="41" severity="error" message="Javadoc line should start with leading asterisk." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMissingLeadingAsteriskCheck"/>
+<error line="42" severity="error" message="Javadoc line should start with leading asterisk." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMissingLeadingAsteriskCheck"/>
+<error line="43" severity="error" message="Javadoc line should start with leading asterisk." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMissingLeadingAsteriskCheck"/>
+<error line="44" severity="error" message="Javadoc line should start with leading asterisk." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMissingLeadingAsteriskCheck"/>
+<error line="45" severity="error" message="Javadoc line should start with leading asterisk." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMissingLeadingAsteriskCheck"/>
+<error line="46" severity="error" message="Javadoc line should start with leading asterisk." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMissingLeadingAsteriskCheck"/>
+<error line="47" severity="error" message="Javadoc line should start with leading asterisk." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMissingLeadingAsteriskCheck"/>
+<error line="54" column="5" severity="error" message="Javadoc content should start from the next line after /**." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocContentLocationCheck"/>
+<error line="55" severity="error" message="Javadoc line should start with leading asterisk." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMissingLeadingAsteriskCheck"/>
+<error line="56" severity="error" message="Javadoc line should start with leading asterisk." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMissingLeadingAsteriskCheck"/>
+<error line="57" severity="error" message="Javadoc line should start with leading asterisk." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMissingLeadingAsteriskCheck"/>
+<error line="58" severity="error" message="Javadoc line should start with leading asterisk." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMissingLeadingAsteriskCheck"/>
+<error line="59" severity="error" message="Javadoc line should start with leading asterisk." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMissingLeadingAsteriskCheck"/>
+<error line="60" severity="error" message="Javadoc line should start with leading asterisk." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMissingLeadingAsteriskCheck"/>
+<error line="61" severity="error" message="Javadoc line should start with leading asterisk." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMissingLeadingAsteriskCheck"/>
+<error line="62" severity="error" message="Javadoc line should start with leading asterisk." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMissingLeadingAsteriskCheck"/>
+</file>
+<file name="/Users/chellu/Documents/GitHub/ip-master/src/main/java/bazinga/command/Parser.java">
+<error line="3" column="1" severity="error" message="Missing a Javadoc comment." source="com.puppycrawl.tools.checkstyle.checks.javadoc.MissingJavadocTypeCheck"/>
+<error line="4" column="5" severity="error" message="Missing a Javadoc comment." source="com.puppycrawl.tools.checkstyle.checks.javadoc.MissingJavadocMethodCheck"/>
+</file>
+</checkstyle>
