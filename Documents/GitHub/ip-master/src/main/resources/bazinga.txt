@@ -1,0 +1,5 @@
+T | 0 | watch tv
+T | 0 | eat food
+T | 0 | watch f1
+T | 0 | slap urself
+T | 0 | f1 report
