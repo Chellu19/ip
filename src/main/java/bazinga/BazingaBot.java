@@ -10,6 +10,7 @@ import bazinga.task.TaskList;
 import bazinga.task.TaskException;
 import bazinga.task.Todo;
 import java.util.ArrayList;
+import java.util.stream.Collectors;
 
 /**
  * BazingaBot is the main class for the task management application.
@@ -214,12 +215,9 @@ public class BazingaBot {
             throw new TaskException("Please specify a keyword to find!!! I am not a Mind Reader");
         }
         String keyword = parts[1].trim().toLowerCase();
-        ArrayList<Task> foundTasks = new ArrayList<>();
-        for (Task task : tasks) {
-            if (task.getDescription().toLowerCase().contains(keyword)) {
-                foundTasks.add(task);
-            }
-        }
+        ArrayList<Task> foundTasks = tasks.stream()
+                .filter(task -> task.getDescription().toLowerCase().contains(keyword))
+                .collect(Collectors.toCollection(ArrayList::new));
 
         if (foundTasks.isEmpty()) {
             return "No tasks found. Are you sure you want to find this?";
