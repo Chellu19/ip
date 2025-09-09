@@ -6,12 +6,12 @@ plugins {
     id 'org.openjfx.javafxplugin' version '0.1.0'
 }
 
-mainClassName = 'bazinga.BazingaBot';
+mainClassName = 'bazinga.Launcher';
 
 jar {
     manifest {
         attributes(
-                'Main-Class': 'bazinga.BazingaBot'
+                'Main-Class': 'bazinga.Launcher'
         )
     } from {
         configurations.runtimeClasspath.collect {it.isDirectory() ? it : zipTree(it)}

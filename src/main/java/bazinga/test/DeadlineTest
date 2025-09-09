@@ -1,5 +1,7 @@
 package bazinga.task.Event;
+
 import org.junit.jupiter.api.Test;
+
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class DeadlineTest {
@@ -20,7 +22,7 @@ public class DeadlineTest {
 
     @Test
     void testToSaveFormat_done() {
-        Deadline d = new Deadline("Submit report", true,  "2025-08-31");
+        Deadline d = new Deadline("Submit report", true, "2025-08-31");
         String expected = "D | 1 | Submit report | 2025-08-31";
         assertEquals(expected, d.toSaveFormat());
     }
