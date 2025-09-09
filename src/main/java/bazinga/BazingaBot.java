@@ -9,6 +9,7 @@ import bazinga.storage.Storage;
 import bazinga.task.TaskList;
 import bazinga.task.TaskException;
 import bazinga.task.Todo;
+
 import java.util.ArrayList;
 
 /**
@@ -104,6 +105,9 @@ public class BazingaBot {
         Todo newTodo = new Todo(description);
         tasks.add(newTodo);
         storage.save(tasks);
+
+        assert storage.load().size() == tasks.size() : "Mismatch between memory and saved tasks";
+
         return "I have added to my eidetic memory: " + newTodo +
                 "\nThere is now " + tasks.size() + " tasks to do. Go ahead procrastinate more.";
     }
@@ -121,12 +125,17 @@ public class BazingaBot {
             throw new TaskException("Please specify a valid deadline using /by.");
         }
 
+        assert deadlineParts.length == 2 : "Deadline should have description and by";
+
         String description = deadlineParts[0].trim();
         String by = deadlineParts[1].trim();
 
         Deadline newDeadline = new Deadline(description, by);
         tasks.add(newDeadline);
         storage.save(tasks);
+
+        assert storage.load().size() == tasks.size() : "Mismatch between memory and saved tasks";
+
         return "I have added to my eidetic memory: " + newDeadline +
                 "\nThere is now " + tasks.size() + " tasks to do. Go ahead procrastinate more.";
     }
@@ -144,6 +153,8 @@ public class BazingaBot {
             throw new TaskException("Please specify a valid event with /from and /to.");
         }
 
+        assert eventParts.length == 3 : "Event should have 3 parts, description, from and to";
+
         String description = eventParts[0].trim();
         String from = eventParts[1].trim();
         String to = eventParts[2].trim();
@@ -151,6 +162,9 @@ public class BazingaBot {
         Event newEvent = new Event(description, from, to);
         tasks.add(newEvent);
         storage.save(tasks);
+
+        assert storage.load().size() == tasks.size() : "Mismatch between memory and saved tasks";
+
         return "I have added to my eidetic memory: " + newEvent +
                 "\nThere is now " + tasks.size() + " tasks to do. Go ahead procrastinate more.";
     }
@@ -182,8 +196,14 @@ public class BazingaBot {
             throw new TaskException("Invalid task number: " + (taskId + 1));
         }
 
+        assert tasks != null : "Task list should not be null";
+        assert taskId >= 0 && taskId < tasks.size() : "Task idx is out of bounds";
+
         tasks.get(taskId).markAsDone();
         storage.save(tasks);
+
+        assert storage.load().size() == tasks.size() : "Mismatch between memory and saved tasks";
+
         return "Ok, done. Maybe that will help chip away at the mountain of procrastination you have\n" +
                 tasks.get(taskId).getStatusIcon() + " " + tasks.get(taskId).getDescription();
     }
@@ -200,8 +220,14 @@ public class BazingaBot {
             throw new TaskException("Invalid task number: " + (taskId + 1));
         }
 
+        assert tasks != null : "Task list should not be null";
+        assert taskId >= 0 && taskId < tasks.size() : "Task idx is out of bounds";
+
         tasks.get(taskId).markAsNotDone();
         storage.save(tasks);
+
+        assert storage.load().size() == tasks.size() : "Mismatch between memory and saved tasks";
+
         return "Not done! Man's inefficiencies are astounding\n" +
                 tasks.get(taskId).getStatusIcon() + " " + tasks.get(taskId).getDescription();
     }
@@ -243,8 +269,14 @@ public class BazingaBot {
         if (taskId < 0 || taskId >= tasks.size()) {
             throw new TaskException("Invalid task number: " + (taskId + 1));
         }
+        assert tasks != null : "Task list should not be null";
+        assert taskId >= 0 && taskId < tasks.size() : "Task idx is out of bounds";
+
         Task removed = tasks.remove(taskId);
         storage.save(tasks);
+
+        assert storage.load().size() == tasks.size() : "Mismatch between memory and saved tasks";
+
         return "Ok I have wiped this from my memory: " + removed +
                 "\nThere are " + tasks.size() + " quests you have left fellow gladiator.";
     }
