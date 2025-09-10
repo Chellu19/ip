@@ -24,7 +24,9 @@ public class Storage {
 
         try{
             if(!file.exists()){
-                file.getParentFile().mkdirs();
+                if (file.getParentFile() != null) {
+                    file.getParentFile().mkdirs();
+                }
                 file.createNewFile();
                 return tasks;
             }
@@ -49,7 +51,11 @@ public class Storage {
     }
 
     public void save(ArrayList<Task> tasks) {
+        File file = new File(filePath);
         try{
+            if(file.getParentFile() != null){
+                file.getParentFile().mkdirs();
+            }
             FileWriter fw = new FileWriter(filePath);
             for(Task task : tasks){
                 fw.write(task.toSaveFormat() + System.lineSeparator());

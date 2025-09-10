@@ -1,5 +1,7 @@
 package bazinga.task;
 
+import java.time.LocalDateTime;
+
 /**
  * Represents a generic task in the task management system.
  * This is an abstract base class for specific task types (Todo, Deadline, Event).
@@ -18,6 +20,7 @@ public abstract class Task {
     protected String description;
     protected boolean isDone;
     protected TaskType taskType;
+    public abstract LocalDateTime getDeadline();
 
     /**
      * Constructs a new Task with the given description and type.
