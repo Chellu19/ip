@@ -60,6 +60,9 @@ public class Event extends Task {
         this.to = LocalDateTime.parse(toStr, INPUT_FORMAT);
     }
 
+    public LocalDateTime getDeadline() {
+        return this.to;
+    }
     /**
      * Returns the string representation of the Event task.
      * <p>

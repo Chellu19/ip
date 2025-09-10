@@ -11,6 +11,7 @@ import bazinga.task.TaskException;
 import bazinga.task.Todo;
 
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.stream.Collectors;
 
 /**
@@ -177,6 +178,8 @@ public class BazingaBot {
         if (tasks.isEmpty()) {
             return "No tasks in memory. Relax, you have nothing to do!";
         }
+
+        tasks.sort(Comparator.comparing(Task::getDeadline, Comparator.nullsLast(Comparator.naturalOrder())));
 
         StringBuilder sb = new StringBuilder("Your tasks:\n");
         for (int i = 0; i < tasks.size(); i++) {

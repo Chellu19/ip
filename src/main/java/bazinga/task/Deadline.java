@@ -1,6 +1,7 @@
 package bazinga.task;
 
 import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.time.format.DateTimeParseException;
 
@@ -51,6 +52,11 @@ public class Deadline extends Task {
     public Deadline(String description, boolean isDone, String byStr) {
         super(description, Task.TaskType.DEADLINE, isDone);
         this.by = LocalDate.parse(byStr, INPUT_FORMAT);
+    }
+
+    @Override
+    public LocalDateTime getDeadline() {
+        return by.atTime(23, 59);
     }
 
     /**

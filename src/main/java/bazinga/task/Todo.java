@@ -1,5 +1,6 @@
 package bazinga.task;
 
+import java.time.LocalDateTime;
 import java.time.format.DateTimeParseException;
 
 /**
@@ -34,6 +35,11 @@ public class Todo extends Task {
 
     public Todo(String description, boolean isDone) {
         super(description, TaskType.TODO, isDone);
+    }
+
+    @Override
+    public LocalDateTime getDeadline() {
+        return null; // no deadline
     }
 
     /**

@@ -24,6 +24,7 @@ public class TaskList {
      */
     public TaskList(ArrayList<Task> tasks) {
         this.tasks = tasks;
+        sortByDeadline();
     }
 
     /**
@@ -33,6 +34,21 @@ public class TaskList {
      */
     public void addTask(Task task) {
         tasks.add(task);
+        sortByDeadline();
+    }
+
+    private void sortByDeadline() {
+        tasks.sort((t1, t2) -> {
+            if(t1.getDeadline() == null && t2.getDeadline() == null) {
+                return 0;
+            } else if (t1.getDeadline() == null) {
+                return 1;
+            } else if(t2.getDeadline() == null) {
+                return -1;
+            } else {
+                return t1.getDeadline().compareTo(t2.getDeadline());
+            }
+        });
     }
 
     /**
