@@ -14,7 +14,7 @@ import javafx.stage.Stage;
  */
 public class Main extends Application {
 
-    private BazingaBot bazinga = new BazingaBot("/src/main/resources/bazinga.txt");
+    private BazingaBot bazinga = new BazingaBot("./data/bazinga.txt");
 
     @Override
     public void start(Stage stage) {

@@ -22,8 +22,10 @@ public class Storage {
         ArrayList<Task> tasks = new ArrayList<>();
         File file = new File(filePath);
 
+        System.out.println("Attempting to load from: " + file.getAbsolutePath());
         try{
             if(!file.exists()){
+                System.out.println("File doesn't exist, creating new one");
                 if (file.getParentFile() != null) {
                     file.getParentFile().mkdirs();
                 }
@@ -31,6 +33,7 @@ public class Storage {
                 return tasks;
             }
 
+            System.out.println("File exists, loading tasks");
             Scanner sc = new Scanner(file);
             while(sc.hasNextLine()){
                 try{

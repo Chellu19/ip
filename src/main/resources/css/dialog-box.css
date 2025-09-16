@@ -1,28 +1,43 @@
+
 .label {
-    -fx-background-color: linear-gradient(to bottom right, #00ffbf, #00ddff);
-    -fx-border-color: #d55e00 #009e73 #cc79a7 #0072b2;
-    -fx-border-width: 2px;
-    -fx-background-radius: 1em 1em 0 1em;
-    -fx-border-radius: 1em 1em 0 1em;
-    -fx-padding: 6px;
-    -fx-border-insets: 0px 7px 0px 7px;
-    -fx-background-insets: 0px 7px 0px 7px;
+    -fx-background-color: rgba(255, 255, 255, 0.15);
+    -fx-background-insets: 0;
+    -fx-text-fill: linear-gradient(to bottom, #ffae00, #e6e6e6);
+    -fx-font-size: 14px;
+    -fx-padding: 10px 14px;
+    -fx-background-radius: 18px 18px 4px 18px;
+    -fx-border-radius: 18px 18px 4px 18px;
+    -fx-border-color: rgba(255, 255, 255, 0.5);
+    -fx-border-width: 1px;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.5), 10, 0.3, 0, 3);
+    -fx-wrap-text: true;
+    -fx-max-width: 320px;
+    -fx-border-insets: 0;
 }
 
 .reply-label {
-    -fx-background-radius: 1em 1em 1em 0;
-    -fx-border-radius: 1em 1em 1em 0;
+    -fx-background-color: rgba(0, 0, 0, 0.25);
+    -fx-font-size: 14px;
+    -fx-padding: 10px 14px;
+    -fx-background-radius: 18px 18px 18px 4px;
+    -fx-border-radius: 18px 18px 18px 4px;
+    -fx-border-color: rgba(255, 255, 255, 0.4);
+    -fx-border-width: 1px;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.6), 12, 0.3, 0, 4);
+    -fx-wrap-text: true;
+    -fx-max-width: 320px;
+    -fx-text-fill: linear-gradient(to bottom, #ffae00, #e6e6e6);
+}
+
+.label:hover, .reply-label:hover {
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.5), 14, 0.4, 0, 5);
 }
 
 #displayPicture {
-    /* Shadow effect on image. */
-    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.2), 10, 0.5, 5, 5);
-
-    /* Change size of image. */
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.25), 8, 0.4, 2, 2);
+    -fx-background-radius: 50%;   /* makes images circular */
+    -fx-border-radius: 50%;
     -fx-scale-x: 1;
     -fx-scale-y: 1;
-
-    /* Rotate image clockwise by degrees. */
     -fx-rotate: 0;
 }
-
