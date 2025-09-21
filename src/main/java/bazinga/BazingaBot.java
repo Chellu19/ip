@@ -155,11 +155,15 @@ public class BazingaBot {
             throw new TaskException("Please specify a valid event with /from and /to.");
         }
 
-        assert eventParts.length == 3 : "Event should have 3 parts, description, from and to";
+        assert eventParts.length == 3 : "Event should have 3 parts, description, from and to including time in hh:mm format";
 
         String description = eventParts[0].trim();
         String from = eventParts[1].trim();
         String to = eventParts[2].trim();
+
+        if(!isValidTimeFormat(from) || !isValidTimeFormat(to)) {
+            throw new TaskException("I wish to bend the laws of physics by having time as multiple dimensions but hh:mm for now!");
+        }
 
         Event newEvent = new Event(description, from, to);
         tasks.add(newEvent);
@@ -169,6 +173,13 @@ public class BazingaBot {
 
         return "I have added to my eidetic memory: " + newEvent +
                 "\nThere is now " + tasks.size() + " tasks to do. Go ahead procrastinate more.";
+    }
+
+    /**
+     * Validates if a given string matches hh:mm 24-hour format.
+     */
+    private boolean isValidTimeFormat(String time) {
+        return time.matches("([01]\\d|2[0-3]):[0-5]\\d");
     }
 
     /**
